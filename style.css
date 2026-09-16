@@ -1,0 +1,17 @@
+/* Konfigurasi Header Efek Kaca */
+.glass-header {
+    background: rgba(250, 247, 242, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 163, 115, 0.3);
+}
+
+/* Efek Hover Tombol */
+.btn-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -8px rgba(188, 108, 37, 0.35);
+}
