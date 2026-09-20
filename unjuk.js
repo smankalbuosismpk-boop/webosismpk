@@ -499,7 +499,7 @@ function renderResult(data) {
         <div class="result-header">
             <i class="fa-solid ${statusIcon}"></i>
             <h2>${statusTitle}</h2>
-            <p style="opacity: 0.9; font-size: 0.9rem;">Hasil Seleksi Unjuk Bakat OSIS MPK SMANKALBU</p>
+            <p style="opacity: 0.9; font-size: 0.9rem;">Hasil Seleksi Tes Wawasan Umum & Unjuk Bakat</p>
         </div>
         <div class="result-body">
             <div class="info-grid">
