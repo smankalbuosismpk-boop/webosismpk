@@ -377,7 +377,7 @@ const studentDatabase = [
         name: "ZIHAN MELANI",
         birthPlace: "SUKABUMI",
         birthDate: "2010-05-07",
-        status: "PASSED"
+        status: "PENDING"
     }
 ];
 
