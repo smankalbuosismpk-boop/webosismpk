@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Hasil Seleksi Unjuk Bakat - OSIS MPK SMANKALBU</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Penghubung File CSS -->
+    <link rel="stylesheet" href="unjuk.css">
+</head>
+<body>
+
+    <!-- Dynamic Glowing Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="nav-brand">
+            <div class="logo-group">
+                <img src="OSIS.png" alt="Logo OSIS SMANKALBU" class="brand-logo">
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">OSIS MPK SMANKALBU</span>
+                <span class="brand-subtitle">SELEKSI UNJUK BAKAT</span>
+            </div>
+        </a>
+        <div class="nav-badge">
+            <i class="fa-solid fa-circle"></i>
+            <span>TA 2026/2027</span>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <div class="main-card">
+
+            <!-- Loading Overlay -->
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="spinner"></div>
+                <p style="font-weight: 700; color: var(--brown-dark);">Memproses & Memverifikasi Data...</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Mohon tunggu sebentar</p>
+            </div>
+
+            <!-- Form View Header -->
+            <div id="formHeader" class="card-header">
+                <span class="badge-tag">
+                    <i class="fa-solid fa-award"></i> Pengumuman Seleksi
+                </span>
+                <h1>Cek Hasil Seleksi Unjuk Bakat</h1>
+                <p>Masukkan data pendaftaran Anda dengan benar sesuai bukti registrasi awal.</p>
+            </div>
+
+            <!-- Form Inputs -->
+            <form id="selectionForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-grid">
+                    
+                    <!-- Nama Lengkap -->
+                    <div class="form-group">
+                        <label for="fullName">
+                            <i class="fa-solid fa-user"></i> Nama Lengkap Calon Anggota
+                        </label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                class="form-control" 
+                                placeholder="Contoh: Ahmad Rizky Pratama" 
+                                required
+                            >
+                            <i class="fa-solid fa-id-card input-icon"></i>
+                        </div>
+                    </div>
+
+                    <!-- NIC -->
+                    <div class="form-group">
+                        <label for="nicNumber">
+                            <i class="fa-solid fa-hashtag"></i> NIC (Nomor Induk Calon)
+                        </label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="nicNumber" 
+                                class="form-control" 
+                                placeholder="Contoh: UB-2026-089" 
+                                required
+                            >
+                            <i class="fa-solid fa-fingerprint input-icon"></i>
+                        </div>
+                        <span class="hint-text">Nomor yang tertera pada kartu pendaftaran awal</span>
+                    </div>
+
+                    <!-- Tempat & Tanggal Lahir -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthPlace">
+                                <i class="fa-solid fa-location-dot"></i> Tempat Lahir
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="birthPlace" 
+                                    class="form-control" 
+                                    placeholder="Contoh: Jakarta" 
+                                    required
+                                >
+                                <i class="fa-solid fa-city input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">
+                                <i class="fa-solid fa-calendar-day"></i> Tanggal Lahir
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="date" 
+                                    id="birthDate" 
+                                    class="form-control" 
+                                    required
+                                >
+                                <i class="fa-solid fa-calendar input-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-magnifying-glass"></i> Cek Hasil Seleksi
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quick Demo Shortcuts -->
+            <div class="demo-bar" id="demoBar"></div>
+
+            <!-- Result Section Container -->
+            <div id="resultCard" class="result-card"></div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 OSIS & MPK SMANKALBU. All Rights Reserved.</p>
+        <p style="font-size: 0.75rem; margin-top: 4px; opacity: 0.8;">Sistem Informasi Seleksi Unjuk Bakat Terpadu</p>
+    </footer>
+
+    <!-- Penghubung File JavaScript -->
+    <script src="unjuk.js"></script>
+</body>
+</html>
