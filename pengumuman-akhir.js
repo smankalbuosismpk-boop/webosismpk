@@ -1,7 +1,7 @@
 // =========================================================================
 // FITUR WAKTU MUNDUR (COUNTDOWN LOCK) - BUKA 20 NOVEMBER 2026
 // =========================================================================
-const targetDate = new Date("November 20, 2026 20:00:00").getTime();
+const targetDate = new Date("November 21, 2026 20:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
